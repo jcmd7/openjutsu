@@ -1,0 +1,36 @@
+.seedance-shell {max-width:1120px; margin:0 auto; padding:30px 18px 64px; display:grid; gap:24px}
+.seedance-header {display:grid; gap:20px}
+.seedance-back {color:var(--accent);text-decoration:none;font-size:.9rem}
+.seedance-title {display:flex;align-items:center;gap:15px}
+.seedance-symbol {width:56px;height:56px;display:grid;place-items:center;border-radius:15px;background:var(--accent);color:var(--accent-ink);font-size:32px;font-weight:800}
+.seedance-title h1 {font-size:30px;margin:0}
+.seedance-title p {color:var(--muted);margin:0}
+.seedance-layout {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;align-items:start}
+.seedance-panel {display:grid;gap:16px;min-width:0;padding:24px;background:var(--panel);border:1px solid var(--line);border-radius:18px}
+.seedance-panel h2 {font-size:18px;margin:0}
+.seedance-section-title {display:flex;justify-content:space-between;gap:10px;align-items:center}
+.seedance-tag {font-size:12px;border:1px solid var(--line);padding:5px 10px;border-radius:20px;color:var(--accent)}
+.seedance-panel label:not(.seedance-check) {display:grid;gap:7px;font-size:13px;font-weight:600}
+.seedance-panel input:not([type=checkbox]),.seedance-panel select,.seedance-panel textarea {width:100%;background:var(--bg);border:1px solid var(--line);border-radius:9px;padding:10px 11px;font-size:14px;color:var(--text);resize:vertical}
+.seedance-panel input:focus,.seedance-panel select:focus,.seedance-panel textarea:focus {outline:1px solid var(--accent)}
+.seedance-panel label small {color:var(--muted);font-weight:400}
+.seedance-fields {display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.seedance-check {display:flex;gap:10px;align-items:center;font-size:14px}
+.seedance-note {font-size:12px;color:var(--muted);margin:0}
+.seedance-primary {padding:12px;border:0;border-radius:10px;background:var(--accent);color:var(--accent-ink);font-weight:700}
+.seedance-primary:disabled {opacity:.5;cursor:not-allowed}
+.seedance-error {color:var(--danger);font-size:13px;margin:0}
+.seedance-ok {color:var(--accent);font-size:13px;margin:0}
+.seedance-output {min-height:440px}
+.seedance-empty {border:1px dashed var(--line);border-radius:13px;display:grid;place-items:center;text-align:center;padding:70px 24px;color:var(--muted)}
+.seedance-job {display:grid;gap:5px}
+.seedance-job strong {text-transform:capitalize;color:var(--accent)}
+.seedance-job small {overflow-wrap:anywhere}
+.seedance-output video {width:100%;max-height:450px;background:#000}
+.seedance-download,.seedance-help a {color:var(--accent);text-decoration:none}
+.seedance-help {display:grid;gap:8px;border-top:1px solid var(--line);padding-top:18px}
+.seedance-help h3,.seedance-help p {margin:0}
+.seedance-help h3 {font-size:14px}
+.seedance-help p {font-size:13px;color:var(--muted)}
+.seedance-help code {overflow-wrap:anywhere}
+@media(max-width:760px){.seedance-layout {grid-template-columns:1fr}.seedance-fields {grid-template-columns:1fr}.seedance-panel{padding:18px}}

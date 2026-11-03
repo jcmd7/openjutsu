@@ -194,3 +194,18 @@ Notes:
 ## License
 
 MIT, see [`LICENSE`](LICENSE). Model licences are separate. Fix faces depends on InsightFace `buffalo_l`, which is licensed for non-commercial research only, and on the Ultralytics YOLO weights from Bingsu/adetailer, which are AGPL-3.0.
+
+
+## Seedance Studio — direct BytePlus API
+
+Open `/seedance` to access text-to-video and optional first-frame image-to-video through your **own BytePlus ModelArk account**. Available models are Seedance 2.0 Mini, 2.0 Fast, 2.0 and 2.5. No GPU or local ComfyUI connection is required for this screen; the existing ComfyUI swap tools are unchanged.
+
+1. Activate the desired Seedance models in [BytePlus ModelArk](https://ai.byteplus.com/en) and create an API key. Seedance 2.x activation may require a qualifying account balance or plan.
+2. Add `BYTEPLUS_MODELARK_API_KEY=...` to your server-only `.env.local`, then restart the Next.js server. **Never** use a `NEXT_PUBLIC_` prefix or commit the key.
+3. Visit `http://127.0.0.1:3000/seedance`, select a model and settings, then click Generate. Each submission is billed directly to BytePlus.
+4. Use the `flex` service tier for 50% of the online inference token rate when lower priority/longer processing is acceptable. For Seedance 2.5, 480p **drafts** can be finalized separately as 1080p; **both jobs cost money**.
+5. The most recent task ID is stored in the browser for reloads. Download the completed video promptly: ModelArk's output URL expires after 24 hours. OpenJutsu does not yet have durable cloud storage, a cross-device job gallery, upload handling, or spend aggregation.
+
+Image-to-video currently accepts a public HTTPS first-frame image URL, not a file upload. For Seedance 2.x, BytePlus restricts direct uploads of reference material containing real human faces; review its official portrait-asset policies before use. Finalizing a 2.5 draft submits a new billed job. All API credentials and calls are server-side; API routes inherit OpenJutsu's existing access checks.
+
+See [ModelArk's task creation documentation](https://docs.byteplus.com/en/docs/ModelArk/create-video-generation-task-api) and [task retrieval documentation](https://docs.byteplus.com/en/docs/modelark/get-video-generation-task-api).
