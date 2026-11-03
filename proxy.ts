@@ -6,4 +6,4 @@ export function proxy(request: Request) {
 }
 
 // API routes enforce access themselves, so large uploads never pass through Proxy's body cloning.
-export const config = { matcher: "/" };
+export const config = { matcher: ["/", "/seedance"] };
