@@ -1,0 +1,17 @@
+.seedance-page { max-width: 1140px; }
+.seedance-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 20px; align-items: start; }
+.seedance-form label:not(.seedance-check) { display: grid; gap: 6px; font-size: .9rem; color: var(--muted); }
+.seedance-form select, .seedance-form input:not([type=checkbox]), .seedance-form textarea {
+  width: 100%; background: var(--bg); border: 1px solid var(--line); color: var(--text);
+  border-radius: 9px; padding: 10px; font: inherit;
+}
+.seedance-form textarea { resize: vertical; }
+.seedance-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.seedance-check { display: flex; align-items: flex-start; gap: 10px; cursor: pointer; }
+.seedance-check input { margin-top: 5px; flex: none; }
+.seedance-warning { padding: 12px; border: 1px solid #786438; border-radius: 12px; background: #33271048; }
+.seedance-warning p { margin: 6px 0 0; color: var(--muted); }
+.seedance-warning a { color: var(--accent); }
+.seedance-nav { text-decoration: none; display: inline-flex; align-items: center; }
+.seedance-result code { overflow-wrap: anywhere; }
+@media (max-width: 760px) { .seedance-grid, .seedance-pair { grid-template-columns: 1fr; } }
