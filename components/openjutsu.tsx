@@ -709,7 +709,7 @@ export function Openjutsu() {
             <p>Swap the people or things in any video. Open weights, on your own GPU.</p>
           </div>
         </div>
-        <button className="secondary" disabled={!!run || submitting} onClick={() => setWelcome(true)}>Welcome &amp; models</button>
+        <div className="row"><a href="/seedance" className="secondary" style={{ textDecoration: "none" }}>Generate with Seedance</a><button className="secondary" disabled={!!run || submitting} onClick={() => setWelcome(true)}>Welcome &amp; models</button></div>
       </header>
 
       <nav className="modes" aria-label="Mode">
