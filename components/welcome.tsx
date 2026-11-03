@@ -22,6 +22,8 @@ export function Welcome({ value, options, onChange, loading, error, onRefresh, o
       <div><h1>Openjutsu</h1><p>Open weights. Your video. Your GPU.</p></div>
     </div></header>
 
+    <section className="panel welcome-intro" style={{ borderColor: "var(--accent)" }}><h2>Want to generate with Seedance instead?</h2><p>Use the direct BytePlus cloud API. No ComfyUI installation or NVIDIA GPU needed.</p><a className="primary" href="/seedance">Open Seedance studio</a></section>
+
     <section className="welcome-intro">
       <p className="eyebrow">BEFORE YOUR FIRST SWAP</p>
       <h2>Welcome to Openjutsu.</h2>
